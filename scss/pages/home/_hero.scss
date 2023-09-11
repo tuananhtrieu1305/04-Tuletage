@@ -1,0 +1,105 @@
+@use "../../abstracts";
+.hero {
+  background: abstracts.$bg-color;
+  &-container {
+    padding: 90px 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-content {
+    max-width: 470px;
+  }
+  &-heading {
+    max-width: 468px;
+  }
+  &-desc {
+    margin-top: 14px;
+    text-align: left;
+    color: abstracts.$primary-color;
+  }
+  &-cta {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 0 18px;
+  }
+  .start-btn {
+    min-width: 194px;
+  }
+  .explore-btn {
+    min-width: 213px;
+  }
+  &-rate {
+    margin-top: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-right {
+      strong {
+        font-size: 2.2rem;
+        margin-top: 16px;
+        font-weight: 700;
+        line-height: 145.455%;
+        display: block;
+        text-align: left;
+      }
+      span {
+        margin-top: 6px;
+        display: block;
+        text-align: left;
+      }
+      a {
+        margin-top: 16px;
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 155.556%;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-stars {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+  }
+  &-media {
+    max-width: 570px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    position: relative;
+    img {
+      &:first-child {
+        width: 270px;
+        height: 412px;
+        border-radius: 80px 0 80px 0;
+      }
+      &:nth-child(2) {
+        width: 270px;
+        height: 412px;
+        border-radius: 0 80px 0 0;
+      }
+      &:nth-child(3) {
+        width: 270px;
+        height: 232px;
+        border-radius: 0 0 0 80px;
+        margin-top: 30px;
+      }
+      &:nth-child(4) {
+        width: 320px;
+        height: 320px;
+        border-radius: 100rem;
+        border: 40px solid abstracts.$bg-color;
+        position: absolute;
+        bottom: 84px;
+        right: -28px;
+      }
+      &:last-child {
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+      }
+    }
+  }
+}

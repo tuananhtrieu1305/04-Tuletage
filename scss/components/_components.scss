@@ -1,0 +1,33 @@
+@use "../abstracts";
+.btn {
+  --height: 58px;
+  height: var(--height);
+  line-height: var(--height);
+  @include abstracts.flexCenter;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  &-1 {
+    border: 3px solid abstracts.$primary-color;
+    color: #fff;
+    background: abstracts.$primary-color;
+    transition: all 0.2s linear;
+    &:hover {
+      color: abstracts.$primary-color;
+      border: 3px solid abstracts.$primary-color;
+      background: #fff;
+    }
+  }
+  &-2 {
+    color: abstracts.$primary-color;
+    background: abstracts.$bg-color;
+    border: 3px solid abstracts.$bg-color;
+    transition: all 0.2s linear;
+    &:hover {
+      color: abstracts.$bg-color;
+      border: 3px solid abstracts.$primary-color;
+    }
+  }
+}

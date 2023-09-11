@@ -1,0 +1,17 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin grid($column, $spacing) {
+  --column: #{$column};
+  --spacing: #{$spacing};
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+  > * {
+    margin-left: var(--spacing);
+    width: calc(100% / var(--column) - var(--spacing));
+  }
+}

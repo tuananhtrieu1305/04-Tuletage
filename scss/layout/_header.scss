@@ -1,0 +1,136 @@
+@use "../abstracts";
+.header {
+  padding-top: 20px;
+  background: abstracts.$bg-color;
+  position: sticky;
+  top: -20px;
+  z-index: 2;
+  &-container {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 0 74px;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 0 17px;
+  }
+  &-link {
+    padding: 8px 26px;
+    color: abstracts.$primary-color;
+    transition: all 0.2s linear;
+    border-radius: 4px;
+    display: block;
+    &::before {
+      content: attr(title);
+      display: block;
+      font-weight: 500;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+    &:hover {
+      background: abstracts.$light-color;
+      font-weight: 500;
+    }
+    &.active {
+      background: abstracts.$light-color;
+      font-weight: 500;
+    }
+  }
+  .log-in-btn {
+    --height: 44px;
+    min-width: 102px;
+  }
+  // PC
+  @media screen and (min-width: 992px) {
+    .header-menu {
+      display: none;
+    }
+  }
+  // Tablet & Mobile
+  @media screen and (max-width: 991.98px) {
+  }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .header-menu {
+      display: none;
+    }
+    &-list {
+      gap: 0;
+    }
+    &-link {
+      padding: 8px 10px;
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    .header-nav {
+      display: none;
+    }
+  }
+}
+.mobile-header {
+  // PC
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+  // Tablet & Mobile
+  @media screen and (max-width: 991.98px) {
+  }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    display: none;
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0.3);
+      visibility: hidden;
+      transition: all 0.2s linear;
+      opacity: 0;
+    }
+    .menu-checkbox:checked ~ .overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+    .menu-drawer {
+      position: fixed;
+      inset: 0 20% 0 0;
+      background: #fff;
+      z-index: 4;
+      transform: translateX(-100%);
+      transition: all 0.2s linear;
+      padding: 60px;
+    }
+    .menu-checkbox:checked ~ .menu-drawer {
+      transform: translateX(0);
+    }
+    .header-nav {
+      flex-direction: column;
+      padding-top: 20px;
+      align-items: flex-start;
+      gap: 40px 0;
+    }
+    .header-list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px 0;
+    }
+    .header-link {
+      padding: 0;
+    }
+    .log-in-btn {
+      width: 100%;
+    }
+  }
+}
