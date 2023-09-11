@@ -231,13 +231,14 @@ a {
 }
 .btn-2 {
   color: #0b0d21;
-  background: #fdf0df;
-  border: 3px solid #fdf0df;
+  background: #fe0;
+  border: 3px solid #fe0;
   transition: all 0.2s linear;
 }
 .btn-2:hover {
-  color: #fdf0df;
-  border: 3px solid #0b0d21;
+  color: #fe0;
+  border: 3px solid #fe0;
+  background: #0b0d21;
 }
 
 .header {
@@ -526,6 +527,324 @@ a {
   position: absolute;
   bottom: 0;
   right: 100px;
+}
+
+.stat {
+  background: #434ec4;
+}
+.stat-container {
+  padding: 70px 84px;
+  display: flex;
+  align-items: center;
+}
+.stat-container div {
+  text-align: center;
+}
+.stat-container div strong {
+  color: #fff;
+}
+.stat-container div span {
+  color: #d0d4ff;
+  white-space: nowrap;
+  margin-top: 8px;
+  display: inline-block;
+}
+.stat-container div:first-child {
+  margin-right: 70px;
+}
+.stat-container div:last-child {
+  margin-left: 70px;
+}
+.stat-container div:nth-child(2) {
+  padding: 0 70px;
+  position: relative;
+}
+.stat-container div:nth-child(2)::before {
+  content: "";
+  width: 2px;
+  height: 58px;
+  border-radius: 1px;
+  background: #929aef;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.stat-container div:nth-child(2)::after {
+  content: "";
+  width: 2px;
+  height: 58px;
+  border-radius: 1px;
+  background: #929aef;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.stat-container div:nth-child(3) {
+  position: relative;
+  padding: 0 70px;
+}
+.stat-container div:nth-child(3)::before {
+  content: "";
+  width: 2px;
+  height: 58px;
+  border-radius: 1px;
+  background: #929aef;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.feature-container {
+  padding: 160px 0;
+}
+.feature-heading {
+  max-width: 570px;
+  margin: 0 auto;
+}
+.feature-desc {
+  margin: 20px auto 0 auto;
+  max-width: 570px;
+}
+.feature-list {
+  margin-top: 70px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.feature-list::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: #d9d9d9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.feature-item {
+  color: #686977;
+  padding: 0 127px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 155.556%;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+.feature-item.active {
+  color: #0b0d21;
+  border-bottom: 3px solid #0b0d21;
+}
+.feature-section {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.feature-content {
+  padding: 81px 85px 0 0;
+}
+.feature-content-heading {
+  text-align: left;
+}
+.feature-content-desc {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 470px;
+}
+.feature-content button {
+  margin-top: 40px;
+  min-width: 194px;
+}
+.feature-content-heading-2 {
+  margin-top: 160px;
+  text-align: left;
+}
+.feature-content-desc-2 {
+  margin-top: 160px;
+  text-align: left;
+}
+.feature-media-1 {
+  margin-left: auto;
+}
+.feature-media-1 video {
+  width: 570px;
+  height: 520px;
+  background: #fdf0df;
+  border-radius: 6px;
+}
+.feature-media-2 {
+  margin-top: 70px;
+}
+.feature-media-2 video {
+  background: #fdf0df;
+  width: 470px;
+  height: 478px;
+  border-radius: 12px;
+}
+.feature-content-list {
+  margin-top: 70px;
+  --column: 2;
+  --spacing: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+}
+.feature-content-list > * {
+  margin-left: var(--spacing);
+  width: calc(100% / var(--column) - var(--spacing));
+}
+.feature-content-item {
+  cursor: pointer;
+  width: 270px;
+  height: 224px;
+  border-radius: 12px;
+  border: 1px solid #e9eaf0;
+  background: #fff;
+  padding: 40px 20px;
+  transition: all 0.2s linear;
+}
+.feature-content-item:hover {
+  box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+  transform: translateY(-20px);
+}
+.feature-content-item:hover figure img {
+  animation: spinner 0.2s linear forwards;
+}
+.feature-content-item h4 {
+  margin-top: 20px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
+  text-align: left;
+}
+.feature-content-item span {
+  margin-top: 12px;
+  font-size: 1.6rem;
+  line-height: 162.5%;
+}
+
+.course {
+  background: #fdf0df;
+}
+.course-container {
+  padding: 100px 0;
+}
+.course-heading {
+  max-width: 570px;
+  margin: 0 auto;
+}
+.course-desc {
+  margin: 20px auto 0 auto;
+  max-width: 570px;
+}
+.course-list {
+  margin-top: 70px;
+  --column: 3;
+  --spacing: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+}
+.course-list > * {
+  margin-left: var(--spacing);
+  width: calc(100% / var(--column) - var(--spacing));
+}
+.course-item {
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px;
+  transition: all 0.2s linear;
+}
+.course-item:hover {
+  transform: translateY(-10px);
+}
+.course-item-desc {
+  color: #434ec4;
+  font-size: 1.4rem;
+  line-height: 171.429%;
+}
+.course-item h3 {
+  margin-top: 12px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 155.556%;
+  text-align: left;
+}
+.course-item-img {
+  width: 330px;
+  height: 278px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.course-author {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+.course-author img {
+  width: 20px;
+  height: 20px;
+  border-radius: 100rem;
+}
+.course-author p {
+  color: #83848c;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 162.5%;
+}
+.course-stat {
+  margin-top: 12px;
+  display: flex;
+}
+.course-stat img {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+.course-stat span {
+  color: #686977;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  line-height: 162.5%;
+  margin-right: 18px;
+}
+.course-item-bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.course-item-bottom strong {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 155.556%;
+}
+.course-item-bottom button {
+  min-width: 120px;
+  transition: all 0.2s linear;
+}
+.course-item-bottom button:hover {
+  background: #fe0;
+  border: 3px solid #fe0;
+}
+.course-btn {
+  margin: 65px auto 0 auto;
+  min-width: 204px;
 }
 
 /*# sourceMappingURL=main.css.map */

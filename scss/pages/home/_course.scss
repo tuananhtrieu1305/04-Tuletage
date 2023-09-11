@@ -1,0 +1,102 @@
+@use "../../abstracts";
+.course {
+  background: abstracts.$bg-color;
+  &-container {
+    padding: 100px 0;
+  }
+  &-heading {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  &-desc {
+    margin: 20px auto 0 auto;
+    max-width: 570px;
+  }
+  &-list {
+    margin-top: 70px;
+    @include abstracts.grid(3, 30px);
+  }
+  &-item {
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: translateY(-10px);
+    }
+    &-desc {
+      color: #434ec4;
+      font-size: 1.4rem;
+      line-height: 171.429%;
+    }
+    h3 {
+      margin-top: 12px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 155.556%;
+      text-align: left;
+    }
+    &-img {
+      width: 330px;
+      height: 278px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+  }
+  &-author {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 100rem;
+    }
+    p {
+      color: #83848c;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 162.5%;
+    }
+  }
+  &-stat {
+    margin-top: 12px;
+    display: flex;
+    img {
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+    }
+    span {
+      color: #686977;
+      white-space: nowrap;
+      font-size: 1.6rem;
+      line-height: 162.5%;
+      margin-right: 18px;
+    }
+  }
+  &-item-bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    strong {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 155.556%;
+    }
+    button {
+      min-width: 120px;
+      transition: all 0.2s linear;
+      &:hover {
+        background: abstracts.$light-color;
+        border: 3px solid abstracts.$light-color;
+      }
+    }
+  }
+  &-btn {
+    margin: 65px auto 0 auto;
+    min-width: 204px;
+  }
+}

@@ -22,12 +22,13 @@
   }
   &-2 {
     color: abstracts.$primary-color;
-    background: abstracts.$bg-color;
-    border: 3px solid abstracts.$bg-color;
+    background: abstracts.$light-color;
+    border: 3px solid abstracts.$light-color;
     transition: all 0.2s linear;
     &:hover {
-      color: abstracts.$bg-color;
-      border: 3px solid abstracts.$primary-color;
+      color: abstracts.$light-color;
+      border: 3px solid abstracts.$light-color;
+      background: abstracts.$primary-color;
     }
   }
 }

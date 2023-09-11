@@ -1,0 +1,134 @@
+@use "../../abstracts";
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.feature {
+  &-container {
+    padding: 160px 0;
+  }
+  &-heading {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  &-desc {
+    margin: 20px auto 0 auto;
+    max-width: 570px;
+  }
+  &-list {
+    margin-top: 70px;
+    position: relative;
+    padding-bottom: 20px;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      border-radius: 1px;
+      background: #d9d9d9;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &-item {
+    color: abstracts.$text-color;
+    padding: 0 127px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 155.556%;
+    cursor: pointer;
+    padding-bottom: 20px;
+    &.active {
+      color: abstracts.$primary-color;
+      border-bottom: 3px solid abstracts.$primary-color;
+    }
+  }
+  &-section {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &-content {
+    padding: 81px 85px 0 0;
+    &-heading {
+      text-align: left;
+    }
+    &-desc {
+      margin-top: 20px;
+      text-align: left;
+      max-width: 470px;
+    }
+    button {
+      margin-top: 40px;
+      min-width: 194px;
+    }
+    &-heading-2 {
+      margin-top: 160px;
+      text-align: left;
+    }
+    &-desc-2 {
+      margin-top: 160px;
+      text-align: left;
+    }
+  }
+  &-media-1 {
+    margin-left: auto;
+    video {
+      width: 570px;
+      height: 520px;
+      background: abstracts.$bg-color;
+      border-radius: 6px;
+    }
+  }
+  &-media-2 {
+    margin-top: 70px;
+    video {
+      background: abstracts.$bg-color;
+      width: 470px;
+      height: 478px;
+      border-radius: 12px;
+    }
+  }
+  &-content-list {
+    margin-top: 70px;
+    @include abstracts.grid(2, 30px);
+  }
+  &-content-item {
+    cursor: pointer;
+    width: 270px;
+    height: 224px;
+    border-radius: 12px;
+    border: 1px solid #e9eaf0;
+    background: #fff;
+    padding: 40px 20px;
+    transition: all 0.2s linear;
+    &:hover {
+      box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+      transform: translateY(-20px);
+      figure {
+        img {
+          animation: spinner 0.2s linear forwards;
+        }
+      }
+    }
+    h4 {
+      margin-top: 20px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 145.455%;
+      text-align: left;
+    }
+    span {
+      margin-top: 12px;
+      font-size: 1.6rem;
+      line-height: 162.5%;
+    }
+  }
+}
