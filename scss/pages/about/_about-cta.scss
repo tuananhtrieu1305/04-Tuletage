@@ -1,0 +1,32 @@
+@use "../../abstracts";
+.about-cta {
+  background: #434ec4;
+  &-container {
+    padding: 47px 0;
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 140%;
+    }
+    button {
+      --height: 53px;
+      margin: 20px auto 0 auto;
+      color: #fff;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      background: #434ec4;
+      min-width: 110px;
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding: 30px 0;
+    }
+    h2 {
+      font-size: 1.6rem;
+      line-height: 137.5%;
+    }
+  }
+}
