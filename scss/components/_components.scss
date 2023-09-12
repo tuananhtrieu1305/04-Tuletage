@@ -32,3 +32,17 @@
     }
   }
 }
+.nav-list {
+  @include abstracts.flexCenter;
+  gap: 0 12px;
+  div {
+    cursor: pointer;
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background: #d5d6de;
+    &.active {
+      background: #0b0d21;
+    }
+  }
+}

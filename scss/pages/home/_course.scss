@@ -99,4 +99,55 @@
     margin: 65px auto 0 auto;
     min-width: 204px;
   }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    &-list {
+      @include abstracts.grid(2, 30px);
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding: 55px 0;
+    }
+    &-desc {
+      margin-top: 12px;
+    }
+    &-list {
+      margin-top: 28px;
+      @include abstracts.grid(1, 28px);
+    }
+    &-item {
+      padding: 14px;
+      &-img {
+        width: 311px;
+        height: 262px;
+        margin-bottom: 14px;
+      }
+      h3 {
+        margin-top: 2px;
+      }
+    }
+    &-author {
+      margin-top: 12px;
+    }
+    &-stat {
+      span {
+        font-size: 1.4rem;
+      }
+    }
+    &-item-bottom {
+      strong {
+        font-size: 1.6rem;
+      }
+      button {
+        --height: 44px;
+        min-width: 75px;
+        font-size: 1.4rem;
+      }
+    }
+    &-btn {
+      margin-top: 28px;
+    }
+  }
 }

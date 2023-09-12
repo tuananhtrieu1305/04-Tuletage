@@ -1,0 +1,123 @@
+@use "../abstracts";
+.footer {
+  background: abstracts.$bg-color;
+  &-container {
+    padding: 92px 0 28px;
+  }
+  &-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 4fr;
+    grid-gap: 0 130px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid abstracts.$text-color;
+  }
+  &-heading {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  &-links {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+  }
+  &-link {
+    font-size: 1.6rem;
+    white-space: nowrap;
+    line-height: 162.5%;
+  }
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: 0 35px;
+    span {
+      font-size: 1.6rem;
+      line-height: 162.5%;
+      display: block;
+      text-align: left;
+    }
+    a {
+      margin-top: 18px;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 150%;
+    }
+  }
+  .socials {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 0 14px;
+  }
+  .social {
+    @include abstracts.flexCenter;
+    width: 36px;
+    height: 36px;
+    border-radius: 100rem;
+    background: abstracts.$primary-color;
+    transition: all 0.2s linear;
+    svg {
+      color: #fff;
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      background: abstracts.$light-color;
+      svg {
+        color: abstracts.$primary-color;
+      }
+    }
+  }
+  &-bottom {
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-pay {
+    display: flex;
+    align-items: center;
+    gap: 0 28px;
+    margin-left: 120px;
+  }
+  .copyright {
+    font-size: 1.6rem;
+    line-height: 162.5%;
+  }
+  // Tablet & Mobile
+  @media screen and (max-width: 991.98px) {
+    &-pay {
+      margin: 0;
+    }
+  }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    &-top {
+      grid-template-columns: 1fr 2fr;
+      gap: 100px;
+      padding-bottom: 55px;
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding: 55px 0 28px;
+    }
+    &-top {
+      grid-template-columns: 1fr;
+      gap: 28px 0;
+      padding-bottom: 55px;
+    }
+    &-info {
+      flex-direction: column;
+      gap: 28px 0;
+      align-items: flex-start;
+    }
+    &-bottom {
+      flex-direction: column;
+      gap: 28px 0;
+      align-items: flex-start;
+    }
+  }
+}

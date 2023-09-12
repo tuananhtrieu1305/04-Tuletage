@@ -1,0 +1,47 @@
+@use "../../abstracts";
+.contact {
+  background: abstracts.$light-color;
+  &-container {
+    padding: 100px 0;
+    position: relative;
+  }
+  &-content {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  &-desc {
+    margin-top: 20px;
+    color: abstracts.$primary-color;
+  }
+  &-form {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 0 18px;
+    justify-content: space-between;
+    button {
+      min-width: 159px;
+    }
+  }
+  &-input {
+    width: 100%;
+    padding: 15px;
+    color: abstracts.$primary-color;
+    border-radius: 8px;
+    border: 1px solid abstracts.$primary-color;
+    text-align: left;
+  }
+  &-decor {
+    img {
+      position: absolute;
+      &:first-child {
+        top: 146px;
+        left: 34px;
+      }
+      &:last-child {
+        top: 118px;
+        right: 56px;
+      }
+    }
+  }
+}

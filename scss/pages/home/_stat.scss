@@ -65,4 +65,39 @@
       }
     }
   }
+  // Tablet & Mobile
+  @media screen and (max-width: 991.98px) {
+    &-container {
+      padding: 55px 0;
+      flex-direction: column;
+      gap: 28px 0;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px 0;
+        justify-content: center;
+        &:first-child {
+          margin: 0;
+        }
+        &:nth-child(2) {
+          padding: 0;
+          &::before {
+            width: 0;
+          }
+          &::after {
+            width: 0;
+          }
+        }
+        &:nth-child(3) {
+          padding: 0;
+          &::before {
+            width: 0;
+          }
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
