@@ -15,3 +15,11 @@
     width: calc(100% / var(--column) - var(--spacing));
   }
 }
+@mixin line-clamp($line-clamp) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}

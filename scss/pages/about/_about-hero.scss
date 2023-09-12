@@ -1,0 +1,79 @@
+@use "../../abstracts";
+.about-hero {
+  &-tag {
+    background: #434ec4;
+    &-container {
+      padding: 50px 0;
+      span {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 120%;
+        display: block;
+      }
+      h1 {
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 500;
+        margin-top: 30px;
+      }
+      button {
+        --height: 53px;
+        min-width: 256px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        border: 1px solid #fdf0df;
+        background: #434ec4;
+        margin: 35px auto 0 auto;
+        transition: all 0.2s linear;
+        &:hover {
+          border: 1px solid #434ec4;
+          background: #fdf0df;
+          color: #434ec4;
+        }
+      }
+    }
+  }
+  &-content {
+    background: abstracts.$bg-color;
+    &-container {
+      padding: 100px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0 30px;
+      p {
+        max-width: 654px;
+        color: #000;
+        font-size: 1.75rem;
+        line-height: 133.333%;
+        text-align: left;
+        strong {
+          font-weight: 500;
+        }
+      }
+      figure {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+          width: 243px;
+          height: 221.5px;
+          object-fit: cover;
+          &:first-child {
+            border-radius: 10.232px 0px 0px 0px;
+          }
+          &:nth-child(2) {
+            border-radius: 0px 10.232px 0px 0px;
+          }
+          &:nth-child(3) {
+            border-radius: 0px 0px 0px 10.232px;
+          }
+          &:last-child {
+            border-radius: 0px 0px 10.232px 0px;
+          }
+        }
+      }
+    }
+  }
+}

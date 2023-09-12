@@ -90,19 +90,49 @@
   .nav-list {
     margin-top: 55px;
   }
-  // PC
-  @media screen and (min-width: 992px) {
-  }
   // Tablet & Mobile
   @media screen and (max-width: 991.98px) {
-  }
-  // Tablet
-  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    &-top {
+      flex-direction: column;
+      gap: 12px 0;
+    }
+    &-list {
+      @include abstracts.grid(2, 20px);
+    }
   }
   // Mobile
   @media screen and (max-width: 767.98px) {
     &-container {
       padding: 50px 0;
+    }
+    &-list {
+      margin-top: 28px;
+      @include abstracts.grid(1, 0);
+      .about-item {
+        padding: 22px 14px;
+        &:nth-child(2) {
+          display: none;
+        }
+        &:last-child {
+          display: none;
+        }
+        &-content-right {
+          max-width: 273px;
+          blockquote {
+            font-size: 1.4rem;
+            text-align: left;
+          }
+        }
+      }
+    }
+    &-item-content {
+      gap: 0 10px;
+      &-left {
+        flex-shrink: 0;
+      }
+    }
+    .nav-list {
+      margin-top: 38px;
     }
   }
 }

@@ -1,0 +1,123 @@
+@use "../../abstracts";
+.pricing {
+  &-container {
+    padding: 16px 0 100px;
+  }
+  &-list {
+    margin-top: 70px;
+    @include abstracts.grid(3, 30px);
+    .pricing-item {
+      &:first-child {
+        button {
+          min-width: 165px;
+        }
+      }
+    }
+  }
+  &-item {
+    height: 512px;
+    padding: 30px 40px;
+    border-radius: 20px;
+    border: 1px solid #e9eaf0;
+    background: #fff;
+    position: relative;
+    transition: all 0.2s linear;
+    &:hover {
+      background: #111727;
+      strong {
+        color: #fff;
+      }
+      b {
+        color: #fff;
+      }
+      .pricing-tag {
+        color: #fff;
+      }
+      .pricing-desc {
+        color: #cdd0db;
+      }
+      p {
+        color: #cdd0db;
+      }
+      button {
+        background: abstracts.$light-color;
+        color: abstracts.$primary-color;
+      }
+    }
+    strong {
+      margin-top: 7px;
+      color: #000;
+      font-size: 5.6rem;
+      font-weight: 700;
+      line-height: 172.283%;
+      display: block;
+      transition: all 0.2s linear;
+      text-align: left;
+      b {
+        color: #000;
+        transition: all 0.2s linear;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 162.5%;
+      }
+    }
+  }
+  &-tag {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 170%;
+    display: block;
+    transition: all 0.2s linear;
+    text-align: left;
+  }
+  &-desc {
+    transition: all 0.2s linear;
+    margin-top: 7px;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
+  &-check-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      p {
+        color: #0b0d21;
+        transition: all 0.2s linear;
+        font-size: 1.5rem;
+        line-height: 120%;
+      }
+    }
+  }
+  &-btn {
+    --height: 51px;
+    min-width: 128px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+  }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    &-list {
+      @include abstracts.grid(2, 30px);
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding: 30px 0 50px;
+    }
+    &-list {
+      margin-top: 40px;
+      @include abstracts.grid(1, 30px);
+    }
+  }
+}

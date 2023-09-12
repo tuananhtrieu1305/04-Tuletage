@@ -1,0 +1,120 @@
+@use "../../abstracts";
+.course-member {
+  &-container {
+    padding: 50px 0 100px;
+  }
+  &-list {
+    margin-top: 100px;
+    @include abstracts.grid(4, 20px);
+    position: relative;
+  }
+  &-item {
+    img {
+      width: 277px;
+      height: 315px;
+      border-radius: 10px;
+    }
+    strong {
+      margin-top: 10px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 155.556%;
+      display: block;
+    }
+    span {
+      margin: 5px auto 0 auto;
+      display: block;
+      font-size: 1.4rem;
+      line-height: 171.429%;
+    }
+  }
+  &-nav {
+    figure {
+      transition: all 0.2s linear;
+      svg {
+        transition: all 0.2s linear;
+      }
+      &:hover {
+        background: #f2994a;
+        border: 1px solid #f2994a;
+        svg {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .arrow-left {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 100rem;
+    background: #fff;
+    @include abstracts.flexCenter;
+    border: 1px solid #e9eaf0;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    left: -12px;
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+  .arrow-right {
+    @extend .arrow-left;
+    left: initial;
+    right: -32px;
+    svg {
+      transform: rotate(0);
+    }
+  }
+  // PC
+  @media screen and (min-width: 992px) {
+  }
+  // Tablet & Mobile
+  @media screen and (max-width: 991.98px) {
+  }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    &-list {
+      @include abstracts.grid(3, 30px);
+      .course-member-item {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+    .arrow-left {
+      left: 16px;
+    }
+    .arrow-right {
+      right: -10px;
+      left: initial;
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding: 25px 0 50px;
+    }
+    &-list {
+      margin-top: 40px;
+      @include abstracts.grid(1, 30px);
+    }
+    &-item {
+      text-align: center;
+      img {
+        margin: 0 auto;
+      }
+    }
+    .arrow-left {
+      bottom: -40px;
+      top: initial;
+      transform: translateY(0);
+      left: 121px;
+    }
+    .arrow-right {
+      left: initial;
+      right: 91px;
+    }
+  }
+}

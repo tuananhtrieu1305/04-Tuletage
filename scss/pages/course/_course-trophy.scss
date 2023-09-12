@@ -1,0 +1,46 @@
+@use "../../abstracts";
+.course-tropic {
+  &-container {
+    padding: 100px 0 50px;
+  }
+  &-list {
+    margin-top: 100px;
+    @include abstracts.grid(3, 30px);
+    .course-item {
+      border: 1px solid #e9eaf0;
+      transition: all 0.2s linear;
+      &:hover {
+        box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+      }
+      h3 {
+        @include abstracts.line-clamp(2);
+      }
+    }
+  }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    &-list {
+      @include abstracts.grid(2, 30px);
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding: 50px 0 25px;
+    }
+    &-list {
+      @include abstracts.grid(1, 30px);
+      .course-item {
+        &:nth-child(4) {
+          display: none;
+        }
+        &:nth-child(5) {
+          display: none;
+        }
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+    }
+  }
+}
