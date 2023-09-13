@@ -1,0 +1,97 @@
+@use "../../abstracts";
+.blog-hero {
+  background: abstracts.$bg-color;
+  &-container {
+    padding: 80px 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 99px;
+  }
+  &-content {
+    max-width: 585px;
+    h1 {
+      text-align: left;
+      font-size: 6.2rem;
+      line-height: 106.452%;
+    }
+    span {
+      margin-top: 20px;
+      display: inline-block;
+      strong {
+        font-weight: 500;
+      }
+    }
+    p {
+      margin-top: 10px;
+      text-align: left;
+      @include abstracts.line-clamp(3);
+    }
+    button {
+      margin-top: 30px;
+      --height: 44px;
+      min-width: 138px;
+      @include abstracts.flexCenter;
+      gap: 0 8px;
+      transition: all 0.2s linear;
+      &:hover {
+        b {
+          color: #fff;
+        }
+        svg {
+          color: #fff;
+        }
+      }
+      b {
+        color: #000;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+      }
+      svg {
+        color: #000;
+      }
+    }
+  }
+  // Tablet & Mobile
+  @media screen and (max-width: 991.98px) {
+    &-container {
+      flex-direction: column;
+      gap: 30px 0;
+    }
+  }
+  // Mobile
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding: 15px 0 30px;
+    }
+    &-content {
+      h1 {
+        font-size: 3.5rem;
+        line-height: 108.571%;
+      }
+      span {
+        margin-top: 10px;
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        @include abstracts.line-clamp(4);
+      }
+      button {
+        margin-top: 20px;
+        --height: 25px;
+        min-width: 80px;
+        gap: 0 4px;
+        b {
+          font-size: 0.9rem;
+          line-height: 150%;
+        }
+        svg {
+          width: 7px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+}

@@ -2113,6 +2113,234 @@ a {
   }
 }
 
+.blog-hero {
+  background: #fdf0df;
+}
+.blog-hero-container {
+  padding: 80px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 99px;
+}
+.blog-hero-content {
+  max-width: 585px;
+}
+.blog-hero-content h1 {
+  text-align: left;
+  font-size: 6.2rem;
+  line-height: 106.452%;
+}
+.blog-hero-content span {
+  margin-top: 20px;
+  display: inline-block;
+}
+.blog-hero-content span strong {
+  font-weight: 500;
+}
+.blog-hero-content p {
+  margin-top: 10px;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.blog-hero-content button {
+  margin-top: 30px;
+  --height: 44px;
+  min-width: 138px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 8px;
+  transition: all 0.2s linear;
+}
+.blog-hero-content button:hover b {
+  color: #fff;
+}
+.blog-hero-content button:hover svg {
+  color: #fff;
+}
+.blog-hero-content button b {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.blog-hero-content button svg {
+  color: #000;
+}
+@media screen and (max-width: 991.98px) {
+  .blog-hero-container {
+    flex-direction: column;
+    gap: 30px 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .blog-hero-container {
+    padding: 15px 0 30px;
+  }
+  .blog-hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 108.571%;
+  }
+  .blog-hero-content span {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  .blog-hero-content p {
+    font-size: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  .blog-hero-content button {
+    margin-top: 20px;
+    --height: 25px;
+    min-width: 80px;
+    gap: 0 4px;
+  }
+  .blog-hero-content button b {
+    font-size: 0.9rem;
+    line-height: 150%;
+  }
+  .blog-hero-content button svg {
+    width: 7px;
+    margin-top: 2px;
+  }
+}
+
+.blog-course-container {
+  padding: 100px 0;
+}
+.blog-course-list {
+  --column: 2;
+  --spacing: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+  row-gap: 40px;
+}
+.blog-course-list > * {
+  margin-left: var(--spacing);
+  width: calc(100% / var(--column) - var(--spacing));
+}
+.blog-course-item figure {
+  width: 560px;
+  height: 370px;
+}
+.blog-course-item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.blog-course-item span {
+  margin-top: 20px;
+  display: inline-block;
+  color: #434ec4;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 175%;
+}
+.blog-course-item h2 {
+  margin-top: 10px;
+  text-align: left;
+  color: #000;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.blog-course-item p {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 162.5%;
+}
+.blog-course-item a {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0 11px;
+}
+.blog-course-item a strong {
+  color: #434ec4;
+  font-weight: 400;
+  line-height: 162.5%;
+}
+.blog-course-item a svg {
+  color: #434ec4;
+}
+.blog-course-btn {
+  margin: 50px auto 0 auto;
+  min-width: 204px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .blog-course-item figure {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .blog-course-container {
+    padding: 50px 0;
+  }
+  .blog-course-list {
+    --column: 1;
+    --spacing: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--spacing);
+    margin-left: calc(-1 * var(--spacing));
+  }
+  .blog-course-list > * {
+    margin-left: var(--spacing);
+    width: calc(100% / var(--column) - var(--spacing));
+  }
+  .blog-course-item:first-child {
+    display: none;
+  }
+  .blog-course-item figure {
+    width: 335px;
+    height: 221.339px;
+  }
+  .blog-course-item span {
+    margin-top: 11px;
+    font-size: 1.2rem;
+    line-height: 150%;
+  }
+  .blog-course-item h2 {
+    margin-top: 5px;
+    font-size: 1.6rem;
+    line-height: 137.5%;
+  }
+  .blog-course-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 150%;
+  }
+  .blog-course-item a {
+    gap: 0 5px;
+  }
+  .blog-course-item a strong {
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  .blog-course-item a svg {
+    width: 10px;
+    margin-top: 1px;
+  }
+  .blog-course-btn {
+    margin-top: 40px;
+  }
+}
+
 .mentor-member {
   background: #fdf0df;
 }
