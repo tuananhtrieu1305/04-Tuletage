@@ -889,15 +889,29 @@ a {
   line-height: 155.556%;
   cursor: pointer;
   padding-bottom: 20px;
+  transition: all 0.2s linear;
 }
 .feature-item.active {
   color: #0b0d21;
-  border-bottom: 3px solid #0b0d21;
+}
+.feature-line {
+  position: absolute;
+  left: 0;
+  width: 0;
+  border-radius: 0.0625rem;
+  background: #434ec4;
+  height: 2px;
+  bottom: 0;
+  transition: all 0.2s linear;
 }
 .feature-section {
   margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  display: none;
+}
+.feature-section.active {
+  display: grid;
 }
 .feature-content {
   padding: 81px 85px 0 0;

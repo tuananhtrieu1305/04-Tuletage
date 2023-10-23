@@ -45,15 +45,29 @@
     line-height: 155.556%;
     cursor: pointer;
     padding-bottom: 20px;
+    transition: all 0.2s linear;
     &.active {
       color: abstracts.$primary-color;
-      border-bottom: 3px solid abstracts.$primary-color;
     }
+  }
+  &-line {
+    position: absolute;
+    left: 0;
+    width: 0;
+    border-radius: 0.0625rem;
+    background: #434ec4;
+    height: 2px;
+    bottom: 0;
+    transition: all 0.2s linear;
   }
   &-section {
     margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    display: none;
+    &.active {
+      display: grid;
+    }
   }
   &-content {
     padding: 81px 85px 0 0;
